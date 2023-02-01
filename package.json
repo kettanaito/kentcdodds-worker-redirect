@@ -1,0 +1,16 @@
+{
+  "name": "kent-worker-redirect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "keywords": [],
+  "author": "Artem Zakharchenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@fastify/static": "^6.8.0",
+    "fastify": "^4.12.0"
+  }
+}
