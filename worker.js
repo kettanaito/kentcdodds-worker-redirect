@@ -16,12 +16,17 @@ self.addEventListener('fetch', (event) => {
     // Having a predicate is a good idea so we don't end up
     // redirecting from everywhere on the site.
     if (url.pathname === '/nested') {
+      const destination = new URL(
+        url.pathname + url.search,
+        'http://localhost:8080'
+      )
+
       return event.respondWith(
         new Response(null, {
           status: 301,
           headers: {
             // Construct a regular redirect response.
-            Location: 'http://localhost:8080/nested',
+            Location: destination,
           },
         })
       )
